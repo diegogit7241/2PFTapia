@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Alumno } from '../Models';
+import { Alumno } from 'src/app/Models';
 
 @Component({
   selector: 'app-user-table',

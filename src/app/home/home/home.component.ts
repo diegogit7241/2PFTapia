@@ -39,7 +39,7 @@ export class HomeComponent {
       id:1,
       name: 'Calculo',
       capacity: '20',
-      schedule: 'lunes'
+      hours: 350
     }];
 
     

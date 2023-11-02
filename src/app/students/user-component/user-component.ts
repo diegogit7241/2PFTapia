@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Alumno } from '../Models';
-import { StudentService } from '../student.service';
+import { Alumno } from 'src/app/Models';
+import { StudentService } from 'src/app/student.service';
+
+
 import { UserDialogComponent } from '../user-dialog/user-dialog.component';
 
 @Component({

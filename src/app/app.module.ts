@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { CoursesTableComponent } from './courses/courses-table/courses-table.component';
 import { CoursesDialogComponent } from './courses/courses-dialog/courses-dialog.component';
 import { CoursesComponent } from './courses/courses/courses.component';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -22,11 +23,10 @@ import { CoursesComponent } from './courses/courses/courses.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     DashboardModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
-  providers: [{
-    provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

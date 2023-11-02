@@ -19,8 +19,8 @@ export class CoursesDialogComponent {
     @Inject(MAT_DIALOG_DATA) private course?: Course){
     this.courseForm = this.fb.group({
       name: ['',Validators.required],
-      capacity: ['',Validators.required],
-      schedule: ['',Validators.required]
+      capacity: ['',Validators.maxLength(2)],
+      hours: ['',[Validators.required,Validators.maxLength(3),Validators.pattern(/^-?(0|[1-9]\d*)?$/)]]
     })
 
     if(this.course){

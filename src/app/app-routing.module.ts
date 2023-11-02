@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CoursesComponent } from './courses/courses/courses.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home/home.component';
-import { UserComponent } from './user-component/user-component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { CoursesComponent } from "./courses/courses/courses.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { UserComponent } from "./students/user-component/user-component";
+
 
 const routes: Routes = [
  { 
@@ -26,8 +26,13 @@ const routes: Routes = [
       path: 'enroll',
       component: CoursesComponent,
     },
+    {
+      path: '**',
+      redirectTo: 'home',
+    }
   ],
-},
+  
+}
 ];
 
 @NgModule({

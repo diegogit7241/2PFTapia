@@ -3,7 +3,8 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Alumno } from '../Models';
+import { Alumno } from 'src/app/Models';
+
 
 @Component({
   selector: 'app-user-dialog',
@@ -23,7 +24,7 @@ export class UserDialogComponent {
       lastName: ['',Validators.required],
       country: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
-      phone: ['',[Validators.required,Validators.maxLength(10)]]
+      phone: ['',[Validators.required,Validators.maxLength(10),Validators.pattern(/^-?(0|[1-9]\d*)?$/)]]
     })
 
     if(this.alumno){
